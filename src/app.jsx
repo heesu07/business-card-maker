@@ -1,12 +1,16 @@
 
 import { Router } from 'react-router';
-import './app.css';
 
-function App() {
+import Login from './components/login/login';
+import styles from './app.module.css';
+
+function App({authService}) {
   return (
-    <Router>
-      
-    </Router>
+    
+      <div className={styles.app}>
+        <Login authService={authService}/>
+      </div>
+    
   );
 }
 
