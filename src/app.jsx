@@ -1,9 +1,12 @@
 
+import { Router } from 'react-router';
 import './app.css';
 
 function App() {
   return (
-    <h1>Hello :) </h1>
+    <Router>
+      
+    </Router>
   );
 }
 
