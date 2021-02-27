@@ -25,11 +25,11 @@ const CardAddForm = ({onAdd}) => {
       fileName:'',
       fileURL:'',
     };
-     //formRef.current.reset();
+     formRef.current.reset();
      onAdd(card);
   };
   return (
-    <form className={styles.form} action="">
+    <form ref={formRef} className={styles.form} action="">
       <input ref={nameRef}
         className={styles.input} 
         type="text" 
