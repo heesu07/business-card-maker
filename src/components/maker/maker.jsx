@@ -57,7 +57,7 @@ const Maker = ({ authService }) => {
     });
   });
 
- 
+//  object에서 해당 id 가 있으면 업데이트 없으면 생성한다.
   const createOrUpdateCard = card => {    
     setCards(cards => {
       const updated = {...cards};
