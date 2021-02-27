@@ -13,22 +13,41 @@ const CardEditForm = ({card}) => {
     theme,
     fileName,
     fileURL
-  } =card;
+  } = card;
   const onSubmit= () =>{
 
   };
   return (
     <form className={styles.form} action="">
-      <input className={styles.input} type="text" name='name'value={name} />
-      <input className={styles.input} type="text" name='company'value={company} />
-      <select className={styles.select} name="theme" value={theme}>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="colorful">Colorful</option>
+      <input 
+        className={styles.input} 
+        type="text" 
+        name='name'
+        defaultValue={name} />
+      <input 
+        className={styles.input} 
+        type="text" 
+        name='company'
+        defaultValue={company} />
+      <select className={styles.select} name="theme" defaultValue={theme}>
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+        <option value="colorful">colorful</option>
       </select>
-      <input className={styles.input} type="text" name='title'value={title} />
-      <input className={styles.input} type="text" name='email'value={email} />
-      <textarea className={styles.textarea} name="message" vlaue={message}></textarea>
+      <input 
+        className={styles.input} 
+        type="text" 
+        name='title'
+        defaultValue={title} />
+      <input 
+        className={styles.input} 
+        type="text" 
+        name='email'
+        defaultValue={email} />
+      <textarea 
+        className={styles.textarea} 
+        name="message" 
+        defaultValue={message} />
       <div className={styles.fileInput}>
       <ImageFileInput />
       </div>
