@@ -6,11 +6,11 @@ import Header from '../header/header';
 import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
-const Maker = ({ authService }) => {
+const Maker = ({FileInput, authService }) => {
   const [cards, setCards] = useState({
     '1':{
       id: '1',
-      name: 'Ellie',
+      name: 'Ellie 1',
       company:'Samsung',
       theme: 'light',
       title: 'Software Engineer',
@@ -21,7 +21,7 @@ const Maker = ({ authService }) => {
     },
     '2':{
       id: '2',
-      name: 'Ellie',
+      name: 'Ellie 2',
       company:'Samsung',
       theme: 'dark',
       title: 'Software Engineer',
@@ -32,7 +32,7 @@ const Maker = ({ authService }) => {
     },
     '3':{
       id: '3',
-      name: 'Ellie',
+      name: 'Ellie 3',
       company:'Samsung',
       theme: 'colorful',
       title: 'Software Engineer',
@@ -80,6 +80,7 @@ const Maker = ({ authService }) => {
       
         <div className={styles.container}>
           <Editor 
+            FileInput={FileInput}
             cards={cards} 
             addCard={createOrUpdateCard} 
             updateCard={createOrUpdateCard} 
