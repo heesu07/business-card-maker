@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Footer from '../footer/footer';
@@ -13,9 +13,10 @@ const Maker = ({FileInput, authService, cardRepository }) => {
   const [userId, setUserId] =useState(historyState && historyState.id);
 
 
-  const onLogout = () => {
-    authService.logout();
-  };
+  const onLogout = useCallback(() => {
+      authService.logout();
+    },[authService]
+  );
 
   useEffect(() => {
     if(!userId){
@@ -36,7 +37,7 @@ const Maker = ({FileInput, authService, cardRepository }) => {
         history.push('/');
       }
     });
-  }, [userId, history]);
+  }, [userId, history, authService]);
 
 //  object에서 해당 id 가 있으면 업데이트 없으면 생성한다.
   const createOrUpdateCard = card => {    
