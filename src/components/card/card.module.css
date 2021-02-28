@@ -24,9 +24,9 @@
 .avatar {
   width: 10em;
   height: 10em;
-  padding-right: 1em;
+  padding-right: 0;
   margin-left: 0.5em;
-  margin-right: 1em;
+  margin-right: 0.5em;
   border-radius: 50%;
 }
 .info {

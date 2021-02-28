@@ -25,7 +25,7 @@ const Maker = ({FileInput, authService, cardRepository }) => {
       setCards(cards);
     })
     return () => stopSync();
-  }, [userId]);
+  }, [userId, cardRepository]);
 
   useEffect(() => {
     authService.onAuthChange(user => {
@@ -36,7 +36,7 @@ const Maker = ({FileInput, authService, cardRepository }) => {
         history.push('/');
       }
     });
-  });
+  }, [userId, history]);
 
 //  object에서 해당 id 가 있으면 업데이트 없으면 생성한다.
   const createOrUpdateCard = card => {    
